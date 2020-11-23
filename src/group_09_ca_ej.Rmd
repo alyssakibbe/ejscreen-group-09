@@ -10,6 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(janitor)
 library(here)
+library(hexbin)
 ```
 
 ```{r}
@@ -21,6 +22,7 @@ ces <- read.csv(here("data", "ces3demographics.csv")) %>%
 ### Basic scatterplot graph % white vs CalEnviroScreen pollution burden score
 ```{r}
 ggplot(data = ces) +
-  geom_point(aes(x = white, y = ces_3_0_score))
+  geom_hex(aes(x = white, y = ces_3_0_score))+
+  labs(x = "Whites in Population (%)", y = "CES Score")
 ```
 
