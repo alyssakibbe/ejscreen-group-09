@@ -1,0 +1,19 @@
+---
+title: "Group 09 CA pollution burden"
+author: "Alyssa Kibbe and Halley McVeigh"
+date: "11/23/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(janitor)
+library(here)
+```
+
+```{r}
+ces <- read.csv(here("data", "ces3demographics.csv")) %>% 
+  clean_names()
+```
+
