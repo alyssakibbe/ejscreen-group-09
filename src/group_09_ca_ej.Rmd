@@ -28,3 +28,4 @@ ggplot(data = ces) +
   theme_minimal()
 ```
 
+This 2D hexbin plot displays the relationship between % white population of California census tracts versus the corresponding CES (CalEnviroScreen) score. The general trend is one in which communities with a higher % white population have a lower CES score. It is a negative correlation between CES score and % white of a community. 
